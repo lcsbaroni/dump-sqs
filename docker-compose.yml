@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  master:
+    build: .
+    volumes:
+      - ./:/app
+    command: python3 /app/dump-sqs.py
+    env_file:
+    - .env
